@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cstring> // 包含 strlen 和 strcpy
+#include <cstring> 
 
 using namespace std;
 
@@ -17,22 +17,15 @@ public:
     // 4. 赋值运算符重载
     String& operator=(const String& other);
 
-    // 为了测试方便，增加一个打印函数（题目未要求，但验证结果需要）
     void print() const {
         if (m_data) {
             cout << m_data << endl;
         }
     }
 
-    //
-    //
 private:
     char *m_data; // 用于保存字符串
 };
-
-// ---------------------------------------------------------
-// 函数实现部分
-// ---------------------------------------------------------
 
 // 1. 普通构造函数
 String::String(const char* str) {
@@ -62,11 +55,11 @@ String::String(const String& other) {
 String::~String(void) {
     if (m_data != NULL) {
         delete[] m_data; // 释放数组内存
-        m_data = NULL;   // 避免野指针（虽然析构后对象通常不再使用）
+        m_data = NULL;   // 避免野指针
     }
 }
 
-// 4. 赋值函数 (最关键的部分)
+// 4. 赋值函数 
 String& String::operator=(const String& other) {
     // 第一步：检查自赋值 (例如 a = a)
     if (this == &other) {
@@ -84,10 +77,6 @@ String& String::operator=(const String& other) {
     // 第四步：返回本对象的引用
     return *this;
 }
-
-// ---------------------------------------------------------
-// 测试代码
-// ---------------------------------------------------------
 
 int main(void) {
     cout << "--- 测试构造函数 ---" << endl;

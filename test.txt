@@ -1,0 +1,16 @@
+--- 测试构造函数 ---
+str1: Hello World
+str2 (Empty): 
+
+--- 测试拷贝构造函数 ---
+str3 (Copy of str1): Hello World
+
+--- 测试赋值运算符 ---
+str4 (Assigned from str1): Hello World
+
+--- 测试连续赋值 ---
+str5: Hello World
+str6: Hello World
+
+--- 测试自赋值 ---
+str1 after self-assignment: Hello World
